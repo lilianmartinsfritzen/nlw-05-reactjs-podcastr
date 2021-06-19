@@ -1,12 +1,18 @@
 
 import styles from './styles.module.scss';
+// import Image from 'next/image'
+import Image from 'next/image'
 
 export function Player() {
 
     return (
         <div className={styles.playerContainer}>
             <header>
-                <img src="/playing.svg" alt="Tocando agora" />
+                <Image
+                src="/playing.svg" 
+                alt="Tocando agora"
+                width={32}
+                height={32} /> 
                 <strong>Tocando agora</strong>
             </header>
 
@@ -25,19 +31,39 @@ export function Player() {
 
                 <div className={styles.buttons}>
                     <button type="button">
-                        <img src="/shuffle.svg" alt="Embaralhar" />
+                        <Image
+                        src="/shuffle.svg" 
+                        alt="Embaralhar"
+                        width={24}
+                        height={24} />                         
                     </button>
                     <button type="button">
-                        <img src="/play-previous.svg" alt="Tocar anterior" />
+                        <Image
+                        src="/play-previous.svg" 
+                        alt="Tocar anterior"
+                        width={24}
+                        height={24} />  
                     </button>
                     <button type="button" className={styles.playButton}>
-                        <img src="/play.svg" alt="Tocar" />
+                        <Image
+                        src="/play.svg" 
+                        alt="Tocar"
+                        width={32}
+                        height={32} /> 
                     </button>
                     <button type="button">
-                        <img src="/play-next.svg" alt="Tocar próxima" />
+                    <Image
+                        src="/play-next.svg" 
+                        alt="Tocar próxima"
+                        width={24}
+                        height={24} /> 
                     </button>
                     <button type="button">
-                        <img src="/repeat.svg" alt="Repetir" />
+                        <Image
+                        src="/repeat.svg" 
+                        alt="Repetir"
+                        width={24}
+                        height={24} />                     
                     </button>
                 </div>
             </footer>
