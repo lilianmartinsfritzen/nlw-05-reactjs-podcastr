@@ -68,8 +68,7 @@
             padding-left: 0.5rem;
             position: relative;
 
-            &::before {
-              // &::after adiciona um elemento entre os dois spans, antes do last-child
+            &::before { // &::after adiciona um elemento entre os dois spans, antes do last-child
               content: ""; // tem que colocar o content, mesmo que vazio, senão não aparecerá nada em tela
               width: 4px;
               height: 4px;
