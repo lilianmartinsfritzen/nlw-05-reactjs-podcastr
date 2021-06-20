@@ -2,8 +2,12 @@
 import styles from './styles.module.scss';
 // import Image from 'next/image'
 import Image from 'next/image'
+import { useContext } from 'react';
+import { PlayerContext } from '../../contexts/PlayerContext';
 
 export function Player() {
+
+    const player = useContext(PlayerContext)
 
     return (
         <div className={styles.playerContainer}>
@@ -13,7 +17,7 @@ export function Player() {
                 alt="Tocando agora"
                 width={32}
                 height={32} /> 
-                <strong>Tocando agora</strong>
+                <strong>Tocando agora {player}</strong>
             </header>
 
             <div className={styles.emptyPlayer}>
